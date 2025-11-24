@@ -15,10 +15,17 @@ A lightweight, modern desktop application designed to combat digital eye strain 
 - **⌨️ Keyboard Shortcuts**: Quick controls for efficient use
 - **🪶 Lightweight**: ~80-120MB installed, ~50-80MB RAM usage
 
+### **✅ Compatibility**
+
+| Operating System | Minimum Version | Notes |
+| :--------------- | :-------------- | :---- |
+| Windows 11       | Supported       | Full compatibility. |
+| Windows 10       | **10.0.17763.0** | **Required for native notifications.** (Windows 10 October 2018 Update or newer) |
+
 ## 🚀 Quick Start
 
-### For Users (Portable)
-1. Download `BlinkNow-1.0.0-portable.exe` from releases
+### For Users
+1. Download the compatible file with your device architecture from the releases
 2. Double-click to run
 3. Configure your preferences and start
 
@@ -30,7 +37,7 @@ A lightweight, modern desktop application designed to combat digital eye strain 
 
 #### Installation
 ```bash
-# Clone or extract project
+# Clone or extract the project
 cd BlinkNow-Electron
 
 # Install dependencies
@@ -41,6 +48,9 @@ npm start
 
 # Build portable executable
 npm run build:portable
+
+# Build installer and portable executable
+npm run build:win
 ```
 
 ## 🎨 Design
