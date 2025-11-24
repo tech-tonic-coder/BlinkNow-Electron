@@ -1,0 +1,78 @@
+{
+  "name": "blinknow-electron",
+  "version": "1.0.0",
+  "description": "Eye care reminder application",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "build:all": "npm run build:win && npm run build:linux",
+    "build:portable": "electron-builder --win portable"
+  },
+  "keywords": [
+    "eye-care",
+    "reminder",
+    "health"
+  ],
+  "author": "Tech-TONIC-CODER",
+  "license": "GPL-3.0-only",
+  "type": "commonjs",
+  "dependencies": {
+    "bootstrap-icons": "^1.13.1",
+    "auto-launch": "^5.0.6"
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.12",
+    "electron": "^39.2.3"
+  },
+  "build": {
+    "appId": "com.blinknow.app",
+    "productName": "BlinkNow",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "pacman"
+      ],
+      "category": "Utility",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "artifactName": "${productName} Setup-${version}-${arch}.${ext}",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "portable": {
+      "artifactName": "${productName} Portable-${version}-${arch}.${ext}"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "compression": "maximum",
+    "asar": true
+  }
+}
