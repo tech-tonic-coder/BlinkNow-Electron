@@ -6,28 +6,38 @@ A lightweight, modern desktop application designed to combat digital eye strain 
 
 ## ✨ Features
 
-- **⚡ Portable & Zero-Install**: Download and run the executable—no setup required
 - **🔔 Native Notifications**: Uses Windows native notification system
 - **💻 Modern UI**: Clean, contemporary design with light/dark theme support
 - **🌗 Theme Toggle**: Switch between light and dark modes (Ctrl+T)
 - **📍 System Tray**: Minimize to tray for unobtrusive operation
 - **⚙️ Customizable**: Configure reminder intervals and messages
 - **⌨️ Keyboard Shortcuts**: Quick controls for efficient use
-- **🪶 Lightweight**: ~80-120MB installed, ~50-80MB RAM usage
+- **🎈 Lightweight**: ~80-120MB installed, ~50-80MB RAM usage
+- **🐧 Cross-Platform**: Windows and Linux support
 
 ### **✅ Compatibility**
 
 | Operating System | Minimum Version | Notes |
 | :--------------- | :-------------- | :---- |
-| Windows 11       | Supported       | Full compatibility. |
+| Windows 11       | Supported       | Full compatibility (x64 & x86) |
 | Windows 10       | **10.0.17763.0** | **Required for native notifications.** (Windows 10 October 2018 Update or newer) |
+| Linux            | Supported       | AppImage, deb, rpm, and pacman formats |
 
 ## 🚀 Quick Start
 
 ### For Users
-1. Download the compatible file with your device architecture from the releases
-2. Double-click to run
-3. Configure your preferences and start
+
+#### Windows
+- **Installer**: `BlinkNow Setup-1.0.0-x64.exe` or `BlinkNow Setup-1.0.0-ia32.exe`
+- **Portable**: `BlinkNow Portable-1.0.0-x64.exe` or `BlinkNow Portable-1.0.0-ia32.exe`
+
+#### Linux
+- **AppImage**: Universal Linux binary
+- **deb**: Debian/Ubuntu package
+- **rpm**: Fedora/RHEL package
+- **pacman**: Arch Linux package
+
+Download from releases, install/run, and configure your preferences.
 
 ### For Developers
 
@@ -46,32 +56,40 @@ npm install
 # Run in development
 npm start
 
-# Build portable executable
+# Build for Windows (installer + portable)
+npm run build:win
+
+# Build portable only
 npm run build:portable
 
-# Build installer and portable executable
-npm run build:win
+# Build for Linux (all formats)
+npm run build:linux
+
+# Build for all platforms
+npm run build:all
 ```
 
 ## 🎨 Design
 
 - **Window Size**: 520x620px (fixed, non-resizable)
 - **Theme**: Light and Dark mode support
-- **Style**: Modern, clean interface
+- **Style**: Modern, clean interface with Bootstrap Icons
 - **Animations**: Smooth transitions throughout
+
+### ⌨️ Keyboard Shortcuts
 
 | Shortcut | Action |
 |----------|--------|
 | `Space` | Start/Stop timer |
 | `Ctrl+T` | Toggle theme |
-| `ctrl+S` | Open settings |
+| `Ctrl+S` | Open settings |
 | `Esc` | Close window |
 
 ## ⚙️ Settings
 
 Access settings via the gear icon in the top-right corner:
 
-- **Run on Windows startup**: Launch app automatically when Windows starts
+- **Run on Windows startup**: Launch app automatically when Windows starts (Windows only)
 - **Minimize to tray on close**: Keep app running in system tray when closed
 - **Minimize to tray on minimize**: Hide to tray when minimized
 - **Reminder Interval**: 1-120 minutes (default: 20)
@@ -108,20 +126,30 @@ src/
 
 The project uses `electron-builder` for packaging:
 
-- **Target**: Windows Portable (x64)
+### Windows
+- **Targets**: NSIS Installer + Portable (x64 & x86)
+- **Installer**: Customizable installation directory
+- **Icon**: `assets/icon.ico`
+
+### Linux
+- **Targets**: AppImage, deb, rpm, pacman
+- **Category**: Utility
+- **Icon**: `assets/icon.png`
+
+### Common
 - **Compression**: Maximum
 - **ASAR**: Enabled for better performance
-- **Output**: `dist/BlinkNow-{version}-portable.exe`
+- **App ID**: com.blinknow.app
 
 ## 📦 Dependencies
 
 ### Runtime
-- electron: ^28.0.0
+- electron: ^39.2.3
 - auto-launch: ^5.0.6
-- bootstrap-icons: ^1.11.3 (optional)
+- bootstrap-icons: ^1.13.1
 
 ### Development
-- electron-builder: ^24.9.1
+- electron-builder: ^26.0.12
 
 ## 🔒 Security
 
@@ -145,7 +173,7 @@ Contributions are welcome! Please follow the existing code style and principles.
 
 ## 📄 License
 
-MIT License - Feel free to use and modify
+GPL-3.0-only - See LICENSE file for details
 
 ## 🐛 Troubleshooting
 
@@ -156,10 +184,19 @@ rm -rf node_modules package-lock.json
 npm install
 ```
 
-### Notifications Not Working
+### Windows - Notifications Not Working
 - Ensure Windows notifications are enabled
 - Check Focus Assist settings
 - Run app as administrator (if needed)
+
+### Linux - AppImage Won't Run
+```bash
+# Make executable
+chmod +x BlinkNow-*.AppImage
+
+# Run
+./BlinkNow-*.AppImage
+```
 
 ## 🔮 Future Enhancements
 
@@ -167,6 +204,7 @@ npm install
 - [ ] Multiple reminder profiles
 - [ ] Sound notifications
 - [ ] Multi-language support
+- [ ] macOS support
 
 ## 💡 Tips
 
@@ -178,3 +216,5 @@ npm install
 ---
 
 **Made with 👁️ for healthier screen time**
+
+**Author**: TECH-TONIC-CODER
