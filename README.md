@@ -21,7 +21,7 @@ A lightweight, modern desktop application designed to combat digital eye strain 
 | :--------------- | :-------------- | :---- |
 | Windows 11       | Supported       | Full compatibility (x64 & x86) |
 | Windows 10       | **10.0.17763.0** | **Required for native notifications.** (Windows 10 October 2018 Update or newer) |
-| Linux            | Supported       | AppImage, deb, rpm, and pacman formats **Required the libnotify package** |
+| Linux            | Supported       | AppImage, deb, rpm, and pacman formats (**Required the libnotify package**) |
 
 ## 🚀 Quick Start
 
