@@ -12,8 +12,7 @@ A lightweight, modern desktop application designed to combat digital eye strain 
 - **📍 System Tray**: Minimize to tray for unobtrusive operation
 - **⚙️ Customizable**: Configure reminder intervals and messages
 - **⌨️ Keyboard Shortcuts**: Quick controls for efficient use
-- **🎈 Lightweight**: ~80-120MB installed, ~50-80MB RAM usage
-- **🐧 Cross-Platform**: Windows and Linux support
+- **🎈 Lightweight**: ~50-100MB RAM usage
 
 ### **✅ Compatibility**
 
@@ -21,7 +20,6 @@ A lightweight, modern desktop application designed to combat digital eye strain 
 | :--------------- | :-------------- | :---- |
 | Windows 11       | Supported       | Full compatibility (x64 & x86) |
 | Windows 10       | **10.0.17763.0** | **Required for native notifications.** (Windows 10 October 2018 Update or newer) |
-| Linux            | Supported       | AppImage, deb, rpm, and pacman formats |
 
 ## 🚀 Quick Start
 
@@ -30,12 +28,6 @@ A lightweight, modern desktop application designed to combat digital eye strain 
 #### Windows
 - **Installer**: `BlinkNow Setup-1.0.0-x64.exe` or `BlinkNow Setup-1.0.0-ia32.exe`
 - **Portable**: `BlinkNow Portable-1.0.0-x64.exe` or `BlinkNow Portable-1.0.0-ia32.exe`
-
-#### Linux
-- **AppImage**: Universal Linux binary
-- **deb**: Debian/Ubuntu package
-- **rpm**: Fedora/RHEL package
-- **pacman**: Arch Linux package
 
 Download from releases, install/run, and configure your preferences.
 
@@ -68,6 +60,8 @@ npm run build:linux
 # Build for all platforms
 npm run build:all
 ```
+#### Linux system notification
+You can change the notification method to use the Linux system notification instead of the Windows notification system
 
 ## 🎨 Design
 
@@ -204,6 +198,7 @@ chmod +x BlinkNow-*.AppImage
 - [ ] Multiple reminder profiles
 - [ ] Sound notifications
 - [ ] Multi-language support
+- [ ] Linux support
 - [ ] macOS support
 
 ## 💡 Tips
