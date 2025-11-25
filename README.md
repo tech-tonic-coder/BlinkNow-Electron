@@ -196,6 +196,7 @@ chmod +x BlinkNow-*.AppImage
 
 ### Linux - Notifications Not Working
 - Ensure libnotify is installed
+  
 | Linux Distribution | Installation Command |
 |--------------------|----------------------|
 | Debian/Ubuntu and Derivatives | sudo apt install libnotify-bin |
