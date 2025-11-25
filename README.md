@@ -61,7 +61,7 @@ npm run build:linux
 npm run build:all
 ```
 #### Linux system notification
-You can change the notification method to use the Linux system notification instead of the Windows notification system
+You can change the notification service to use the Linux system notification instead of the Windows notification system
 
 ## 🎨 Design
 
