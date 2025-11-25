@@ -209,7 +209,6 @@ chmod +x BlinkNow-*.AppImage
 - [ ] Multiple reminder profiles
 - [ ] Sound notifications
 - [ ] Multi-language support
-- [ ] Linux support
 - [ ] macOS support
 
 ## 💡 Tips
