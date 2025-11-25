@@ -13,6 +13,7 @@ A lightweight, modern desktop application designed to combat digital eye strain 
 - **⚙️ Customizable**: Configure reminder intervals and messages
 - **⌨️ Keyboard Shortcuts**: Quick controls for efficient use
 - **🎈 Lightweight**: ~50-100MB RAM usage
+- **🐧 Cross-Platform**: Windows and Linux support
 
 ### **✅ Compatibility**
 
@@ -20,6 +21,7 @@ A lightweight, modern desktop application designed to combat digital eye strain 
 | :--------------- | :-------------- | :---- |
 | Windows 11       | Supported       | Full compatibility (x64 & x86) |
 | Windows 10       | **10.0.17763.0** | **Required for native notifications.** (Windows 10 October 2018 Update or newer) |
+| Linux            | Supported       | AppImage, deb, rpm, and pacman formats **Required the libnotify package** |
 
 ## 🚀 Quick Start
 
@@ -61,7 +63,7 @@ npm run build:linux
 npm run build:all
 ```
 #### Linux system notification
-You can change the notification service to use the Linux system notification instead of the Windows notification system
+ٍEnsure the libnotify package is installed.
 
 ## 🎨 Design
 
@@ -152,7 +154,7 @@ The project uses `electron-builder` for packaging:
 - Secure IPC communication via preload script
 - No eval() or dynamic code execution
 
-## 📊 Performance
+## 📊 Performance on Windows
 
 | Metric | Value |
 |--------|-------|
@@ -191,6 +193,14 @@ chmod +x BlinkNow-*.AppImage
 # Run
 ./BlinkNow-*.AppImage
 ```
+
+### Linux - Notifications Not Working
+- Ensure libnotify is installed
+| Linux Distribution | Installation Command |
+|--------------------|----------------------|
+| Debian/Ubuntu and Derivatives | sudo apt install libnotify-bin |
+| Fedora and Derivatives (RHEL/CentOS) | sudo dnf install libnotify |
+| Arch Linux | sudo pacman -S libnotify |
 
 ## 🔮 Future Enhancements
 
