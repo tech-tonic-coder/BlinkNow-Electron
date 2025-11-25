@@ -63,7 +63,7 @@ npm run build:linux
 npm run build:all
 ```
 #### Linux system notification
-ٍEnsure the libnotify package is installed.
+Ensure the libnotify package is installed.
 
 ## 🎨 Design
 
