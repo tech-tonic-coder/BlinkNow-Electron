@@ -112,12 +112,6 @@ src/
     └── preload.js  # IPC bridge
 ```
 
-### Design Principles
-- **SOLID**: Single responsibility, clean separation
-- **DRY**: No code duplication
-- **KISS**: Simple, straightforward solutions
-- **YAGNI**: Only necessary features
-
 ## 🛠️ Build Configuration
 
 The project uses `electron-builder` for packaging:
